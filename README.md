@@ -38,10 +38,10 @@ O sistema é baseado em Laravel e utiliza a biblioteca Liquid para PHP. A arquit
 
 ### Fluxo de Renderização
 
-1. Uma requisição chega ao sistema (ex: `/produtos/camiseta-azul`)
+1. Uma requisição chega ao sistema (ex: `/products/camiseta-azul`)
 2. O router do Laravel direciona a requisição para o controlador apropriado
 3. O controlador identifica o tema ativo para a loja
-4. O sistema resolve o template correto a ser usado (ex: `product.liquid`)
+4. O sistema resolve o template correto a ser usado (ex: `product.json`)
 5. Um contexto é construído com todos os dados necessários (produto, loja, configurações)
 6. O motor Liquid renderiza o template com o contexto fornecido
 7. Pós-processamento é aplicado (substituição de URLs, otimizações)
@@ -75,9 +75,6 @@ php artisan key:generate
 
 # Execute migrações
 php artisan migrate
-
-# Instale temas de exemplo (opcional)
-php artisan themes:install-demo
 ```
 
 ### Estrutura de Diretórios do Tema
@@ -158,17 +155,6 @@ Estou trabalhando ativamente nos seguintes desafios:
 4. **Visualizador de página inicial**: A renderização da página inicial também precisa de aprimoramentos.
 
 5. **Sistema de cache**: Implementação de cache para melhorar o desempenho.
-
-## Desenvolvimento e Contribuição
-
-Este é um projeto pessoal, mas contribuições são bem-vindas! Se você quiser contribuir:
-
-1. Faça um fork do repositório
-2. Crie uma branch para sua feature (`git checkout -b feature/sua-feature`)
-3. Implemente suas mudanças
-4. Faça commit das mudanças (`git commit -m 'Adiciona sua feature'`)
-5. Envie para o GitHub (`git push origin feature/sua-feature`)
-6. Abra um Pull Request
 
 ## Licença
 
